@@ -12,4 +12,6 @@
     <color name="grey">#646464</color>
     <color name="line">#E7E7E7</color>
     <color name="pre_text">#A9ACAE</color>
+    <color name="red">@android:color/holo_red_dark</color>
+    <color name="green">@android:color/holo_green_dark</color>
 </resources>

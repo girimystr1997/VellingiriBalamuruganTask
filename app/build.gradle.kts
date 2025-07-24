@@ -49,6 +49,7 @@ dependencies {
 
     implementation(project(":domain"))
     implementation(project(":di"))
+    implementation(project(":data"))
     implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)
@@ -60,9 +61,16 @@ dependencies {
 
     //hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     kapt(libs.hilt.compiler)
 
+    //room
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
     //coroutines
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
     //retrofit

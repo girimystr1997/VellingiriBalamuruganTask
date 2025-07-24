@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 open class BaseViewModel: ViewModel() {
-    val showLoader = MutableLiveData(false)
+    val showLoader = MutableStateFlow(true)
     val showError = MutableLiveData("")
 
     val exceptionMessage = ""
