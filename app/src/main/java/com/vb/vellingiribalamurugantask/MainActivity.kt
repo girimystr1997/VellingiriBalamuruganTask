@@ -8,6 +8,8 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.vb.vellingiribalamurugantask.adapter.UserHoldingItemAdapter
 import com.vb.vellingiribalamurugantask.databinding.ActivityMainBinding
+import com.vb.vellingiribalamurugantask.utils.formatAmount
+import com.vb.vellingiribalamurugantask.utils.showHideAnimation
 import com.vb.vellingiribalamurugantask.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

@@ -5,7 +5,7 @@ import androidx.core.content.ContextCompat
 import com.vb.vellingiribalamurugantask.BaseRecyclerViewAdapter
 import com.vb.vellingiribalamurugantask.R
 import com.vb.vellingiribalamurugantask.databinding.UserHoldingItemBinding
-import com.vb.vellingiribalamurugantask.formatAmount
+import com.vb.vellingiribalamurugantask.utils.formatAmount
 import com.vb.vellingiribalamurugantask.model.UserHolding
 
 class UserHoldingItemAdapter(context: Context) :

@@ -1,4 +1,4 @@
-package com.vb.vellingiribalamurugantask
+package com.vb.vellingiribalamurugantask.utils
 
 import android.view.View
 import android.view.ViewGroup
