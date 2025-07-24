@@ -19,7 +19,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
-        viewBinding = true
+        dataBinding = true
     }
     buildTypes {
         release {
@@ -37,18 +37,26 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    kapt {
+        correctErrorTypes = true
+    }
+    hilt {
+        enableAggregatingTask = false
+    }
 }
 
 dependencies {
 
     implementation(project(":domain"))
     implementation(project(":di"))
+    implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
 
     //hilt
     implementation(libs.hilt.android)
@@ -56,6 +64,10 @@ dependencies {
 
     //coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
     //test
     implementation(libs.kotlinx.coroutines.test)

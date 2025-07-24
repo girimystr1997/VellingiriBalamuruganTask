@@ -10,19 +10,19 @@ material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
 jetbrainsKotlinJvm = "2.0.21"
-hiltAndroid = "2.56.2"
-hiltCompiler = "2.56.2"
+hiltAndroid = "2.57"
+hiltCompiler = "2.57"
 kotlinxCoroutinesAndroid = "1.10.2"
 kotlinxCoroutinesTest = "1.10.2"
 mockitoCore = "5.18.0"
-mockitoKotlin = "5.4.0"
+mockitoKotlin = "6.0.0"
 roomRuntime = "2.8.0-alpha01"
 roomCompiler = "2.8.0-alpha01"
 roomKtx = "2.8.0-alpha01"
-retrofit = "3.0.0"
-converterGson = "3.0.0"
+retrofit = "2.9.0"
+converterGson = "2.9.0"
 kotlinxCoroutinesCore = "1.10.2"
-kotlinStdlib = "2.2.0"
+recyclerview = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +45,7 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -52,4 +53,3 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
-

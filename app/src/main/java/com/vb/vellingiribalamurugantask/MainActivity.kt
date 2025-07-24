@@ -1,14 +1,19 @@
 package com.vb.vellingiribalamurugantask
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.vb.vellingiribalamurugantask.adapter.UserHoldingItemAdapter
+import com.vb.vellingiribalamurugantask.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    lateinit var userHoldingItemAdapter: UserHoldingItemAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        userHoldingItemAdapter = UserHoldingItemAdapter(this)
     }
+
+    override fun getLayout() = R.layout.activity_main
 }

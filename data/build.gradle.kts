@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
+    kotlin("kapt")
 }
 
 android {
@@ -30,6 +30,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    kapt {
+        correctErrorTypes = true
     }
 }
 

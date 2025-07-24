@@ -23,6 +23,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        dataBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -30,4 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+}
+dependencies{
+
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.appcompat)
 }
