@@ -62,6 +62,11 @@ dependencies {
     //hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.hilt.android.testing)
+    testImplementation(libs.mockk)
+    testImplementation(libs.turbine)
     kapt(libs.hilt.compiler)
 
     //room
@@ -78,9 +83,6 @@ dependencies {
     implementation(libs.converter.gson)
 
     //test
-    implementation(libs.kotlinx.coroutines.test)
-    implementation(libs.mockito.core)
-    implementation(libs.mockito.kotlin)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
