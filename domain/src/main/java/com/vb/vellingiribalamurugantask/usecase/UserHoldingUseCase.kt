@@ -20,7 +20,7 @@ class CalculateHoldingValues {
             val currentValue = userHolding.sumOf { it.ltp * it.quantity }
             val totalInvestment = userHolding.sumOf { it.avgPrice * it.quantity }
             val totalPL = currentValue - totalInvestment
-            val pl = userHolding.sumOf { (it.close - it.ltp) * it.quantity }
+            val pl = userHolding.sumOf { (it.ltp - it.close) * it.quantity }
 
             return UserHoldingData(
                 userHolding = userHolding,
