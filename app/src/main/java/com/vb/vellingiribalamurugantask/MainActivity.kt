@@ -31,7 +31,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         lifecycleScope.launch {
             mainViewModel.userHoldingData.collect {
                 mainViewModel.showLoader.emit(it.userHolding.isNotEmpty())
-                userHoldingItemAdapter.setData(it.userHolding, it.totalPl)
+                userHoldingItemAdapter.setData(it.userHolding)
                 with(dataBinding) {
                     currentValue.text = it.currentValue.formatAmount()
                     totalInvestment.text = it.totalInvestment.formatAmount()

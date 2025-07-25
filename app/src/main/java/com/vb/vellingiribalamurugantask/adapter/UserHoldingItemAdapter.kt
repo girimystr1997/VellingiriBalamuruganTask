@@ -12,7 +12,6 @@ class UserHoldingItemAdapter(context: Context) :
     BaseRecyclerViewAdapter<UserHoldingItemBinding>(context) {
 
     var userHolding: List<UserHolding> = emptyList()
-    var tpl = 0.0
 
     override fun setViewHolder(
         holder: MyViewHolder,
@@ -24,6 +23,7 @@ class UserHoldingItemAdapter(context: Context) :
             holderBinding.ltpValue.text = ltp.formatAmount()
             holderBinding.qtyValue.text = quantity.toString()
             holderBinding.totalPnl.apply {
+                val tpl = ((ltp * quantity) - (avgPrice * quantity))
                 val colorRes = if (tpl < 0) R.color.red else R.color.green
                 setTextColor(ContextCompat.getColor(context, colorRes))
                 text = tpl.formatAmount()
@@ -32,9 +32,8 @@ class UserHoldingItemAdapter(context: Context) :
     }
 
 
-    fun setData(holdings: List<UserHolding>, tplValue: Double) {
+    fun setData(holdings: List<UserHolding>) {
         userHolding = holdings
-        tpl = tplValue
         notifyDataSetChanged()
     }
 
