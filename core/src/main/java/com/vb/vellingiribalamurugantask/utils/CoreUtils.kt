@@ -22,6 +22,7 @@ fun ViewGroup.showHideAnimation(duration: Long = 1000,callback:(bool:Boolean)->U
             .setDuration(duration / 2)
             .withEndAction {
                 visibility = View.GONE
+                callback(isVisible)
                 translationY = 0f
             }
     } else {
@@ -30,6 +31,6 @@ fun ViewGroup.showHideAnimation(duration: Long = 1000,callback:(bool:Boolean)->U
         animate()
             .alpha(1f)
             .setDuration(duration)
+        callback(isVisible)
     }
-    callback(isVisible)
 }
